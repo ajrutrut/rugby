@@ -1,0 +1,52 @@
+<html lang="en">
+	<head>
+		<meta charset ="utf-8"/>
+		<link rel = "stylesheet" type="text/css" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href ="sign-up-page.css"/>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script type ="text/javascript">
+			function submitForm() {
+				document.getElementById("btn").disabled = true;
+				var formdata = new FormData();
+				formdata.append("f", document.getElementById("f").value);
+				formdata.append("l", document.getElementById("l").value);
+				formdata.append("e", document.getElementById("e").value);
+				var ajax = new XMLHttpRequest();
+				ajax.open("POST", "http:/localhost/parser.php");
+				ajax.onreadystatechange = function() {
+					if(ajax.readyState == 4 && ajax.status == 200) {
+						if(ajax.responseText == "success") {
+							document.getElementById("my-form").innerHTML = "<h2>Thank you</h2>" + document.getElementById("f").value + " " + document.getElementById("l").value;	
+						} else {
+								document.getElementById("btn").disable = false;
+							}
+					}
+				}
+				ajax.send(formdata);
+			}
+		</script>
+		<title>Rugby-Sign Up</title>
+	</head>
+	<body>
+		<div id ="container">
+		<h1>Join the Team Today!</h1>
+		<p>Sign up to the email list to get up to date info on team practices, game schedules, and volunteer meetings.</p>
+		<p>Follow the team on Facebook, Instagram, and Reddit!</p>
+			<form id ="my-form" onsubmit = "submitForm(); return false;" >
+			<input id = "f" class="txtbox" type="text" name="firstName" placeholder ="First Name" required /> <br>
+			<input id = "l" class="txtbox" type="text" name="lastName" placeholder ="Last Name" required /> <br>
+			<input id = "e" class="txtbox" type="text" name="email" placeholder="Email" required />
+			<br> <button id = "btn" type="submit" value="submit">submit</button>
+			</form>
+			<div>
+				<ul>
+					<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+					<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+					<li><a href="#"><i class ="fa fa-reddit"></i></a></li>
+				</ul>
+			</div>
+		</div>
+
+	</body>
+</html>

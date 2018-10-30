@@ -1,0 +1,43 @@
+body {
+	background: url("http://www.mybulkleylakesnow.com/wp-content/uploads/2015/10/new-background.jpg") no-repeat;
+	background-color: black;
+	 -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+ul {
+	list-style: none;
+}
+ul li {
+	position: relative;
+	right: 20px;
+	text-decoration: none;
+	display: inline;
+	padding: 5px;
+}
+a {
+	color: black;
+	list-style: none;
+	text-decoration: none;
+}
+p {
+	color: black;
+}
+h1 {
+	color: black;
+}
+#container {
+	height: 300px;
+	width:350px;
+	position:absolute;
+	left:40%;
+	top:30%;
+	border: 2px solid black;
+	border-radius: 5px;
+	text-align:center;
+	background-color:#e3ffe2;
+}
+.txtbox {
+	padding: 3px;
+}

@@ -1,0 +1,74 @@
+body {
+	background: url("http://ichef.bbci.co.uk/images/ic/1600xn/p02llvbh.jpg") no-repeat;
+	background-color: black;
+}
+a {
+	color:black;
+	text-decoration: none;
+}
+button {
+	color:black;
+	text-decoration: none;
+}
+.naviContainer {
+	height: 50px;
+	width: 100%;
+	/*border: 2px solid black;*/
+	position: absolute;
+	display: block;
+
+}
+ ul {
+	position: relative;
+	list-style-type: none !important;
+	
+
+}
+ ul li {
+	position: relative;
+	display: inline;
+	float: right;
+	text-decoration: none;
+	color: black;
+	padding: 10px;
+
+
+}
+#titleWrapper {
+	position: relative;
+	top: 280px;
+	left: 12%;
+	height: 225px;
+	width: 400px;
+	border: 2px solid black;
+	border-radius: 10px;
+	background-color:#e3ffe2;
+	
+
+	
+}
+.title {
+	position: relative;
+	text-align:center;
+	color:black;
+	
+
+}
+#titlecap {
+	position: relative;
+	text-align:center;
+	color: black;
+
+	
+}
+#titleButton {
+
+	width: 200px;
+	border: 2px solid black;
+	color: black;
+	position: relative;
+	left: 26%;
+}
+#titleButton:hover {
+	color: green;
+}
